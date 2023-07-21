@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-query.css">
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>Meu site</h1>
+        <i id="burguer" class="material-symbols-outlined" >Menu</i>
+        <menu id="menu">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Testando Media Query</h2>
+            
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae maiores architecto reiciendis perspiciatis, officiis modi molestias. Tenetur ducimus illum fugiat ullam reiciendis, repellendus sed cumque temporibus cum ad qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic porro, excepturi incidunt inventore rem qui a. Non provident ad iste architecto! Recusandae sed, ea ipsam quam omnis quidem magnam explicabo.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, tenetur. Consequatur expedita debitis hic? Nihil facere assumenda quibusdam. Voluptates aliquam voluptatem tempora consequatur laudantium delectus, provident alias enim voluptate error. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto deleniti atque aliquam quibusdam consequuntur, aut ad ipsum accusantium voluptatibus eius nisi aperiam velit non asperiores impedit obcaecati est mollitia laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam quibusdam, saepe praesentium quos odio sunt ea eveniet neque, rerum explicabo dolores commodi? Nam molestiae cum perspiciatis dignissimos ut unde eligendi?
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. At dicta ipsam assumenda aut, modi velit quia inventore. Voluptate fugit, tenetur molestiae iste doloribus officia soluta natus quasi velit culpa quam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid quam eaque repellendus ea totam exercitationem necessitatibus corrupti impedit, mollitia tempora velit reiciendis ipsam error quisquam iste, temporibus eligendi repellat amet! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam optio temporibus quis saepe sunt soluta inventore pariatur quam sequi, quae, ea doloremque, incidunt aut aliquid velit enim porro perferendis repellat?
+            </p>
+        </article>
+    </main>
+    <script>
+        var burguer = document.getElementById("burguer")
+        var menu = document.getElementById("menu")
+
+        burguer.addEventListener("click", function() {
+            if (menu.style.display == "block"){
+            menu.style.display = "none"
+            } else {
+                menu.style.display = "block"
+            } 
+        })
+        
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                menu.style.display = "block"
+            } else {
+                menu.style.display = "none"
+            }
+        }
+    </script>
+</body>
+</html>
